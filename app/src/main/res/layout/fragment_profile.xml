@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.ProfileFragment">
+
+    <TextView
+        android:id="@+id/tv_title_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/dummyText_title_profileFragment"
+        android:textSize="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/iv_avatar_profile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <ImageView
+        android:id="@+id/iv_avatar_profile"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:src="@drawable/ic_baseline_movie_filter_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/label_fullName_profile"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_profile" />
+
+    <TextView
+        android:id="@+id/label_fullName_profile"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/label_full_name_profileFragment"
+        android:textSize="18dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_profile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/iv_avatar_profile"
+        app:layout_constraintBottom_toTopOf="@+id/tv_fullName_profile"
+        />
+
+    <TextView
+        android:id="@+id/tv_fullName_profile"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/dummyText_fullName_profileFragment"
+        android:textSize="18dp"
+        android:gravity="center"
+        android:layout_marginTop="6dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintTop_toBottomOf="@id/label_fullName_profile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/iv_avatar_profile"
+        app:layout_constraintBottom_toTopOf="@+id/label_userEmail_profile"
+        />
+
+    <TextView
+        android:id="@+id/label_userEmail_profile"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/label_email_profileFragment"
+        android:textSize="18dp"
+        android:gravity="center"
+        android:layout_marginTop="6dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_fullName_profile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/iv_avatar_profile"
+        app:layout_constraintBottom_toTopOf="@+id/tv_userEmail_profile"
+        />
+
+    <TextView
+        android:id="@+id/tv_userEmail_profile"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/dummyText_email_profileFragment"
+        android:textSize="18dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintTop_toBottomOf="@id/label_userEmail_profile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/iv_avatar_profile"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/label_userOptions_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginLeft="32dp"
+        android:text="@string/label_user_options_profileFragment"
+        android:textSize="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_avatar_profile" />
+
+    <Button
+        android:id="@+id/btn_editAccount_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/edit_account_btn_profileFragment"
+        android:layout_marginTop="18dp"
+        android:layout_marginRight="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/label_userOptions_profile"
+        app:layout_constraintEnd_toStartOf="@id/btn_deleteAccount_profile" />
+
+    <Button
+        android:id="@+id/btn_deleteAccount_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/delete_account_btn_profileFragment"
+        android:layout_marginTop="18dp"
+        app:layout_constraintStart_toEndOf="@id/btn_editAccount_profile"
+        app:layout_constraintTop_toBottomOf="@id/label_userOptions_profile"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <CheckBox
+        android:id="@+id/checkbox_autoLogIn_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/auto_log_in_checkBox_profileFragment"
+        android:layout_marginTop="18dp"
+        app:layout_constraintTop_toBottomOf="@+id/btn_editAccount_profile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btn_signOut_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sign_out_btn_profileFragment"
+        android:layout_marginRight="18dp"
+        android:layout_marginBottom="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
